@@ -82,7 +82,6 @@ public class SettingsValues {
     public final float mAutoCorrectionThreshold;
     private final boolean mVoiceKeyEnabled;
     private final boolean mVoiceKeyOnMain;
-    public final boolean mVolumeCursor;
 
     public SettingsValues(final SharedPreferences prefs, final Context context) {
         final Resources res = context.getResources();
@@ -152,7 +151,6 @@ public class SettingsValues {
         mVoiceKeyOnMain = mVoiceMode != null && mVoiceMode.equals(voiceModeMain);
         mAdditionalSubtypes = AdditionalSubtype.createAdditionalSubtypesArray(
                 getPrefAdditionalSubtypes(prefs, res));
-        mVolumeCursor = prefs.getBoolean(Settings.PREF_VOLUME_CURSOR, true);
     }
 
     // Helper functions to create member values.
